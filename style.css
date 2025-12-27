@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*define q as medidas seram auteradas com base na caixa determinada*/
+}
+
+:root{
+  --text-color: white;
+  --bg-url: url(./assets/Design\ sem\ nome.png);
+  --switch-sun: url(./assets/moon_stars.svg);
+}
+.light{
+  --text-color: black; 
+  --bg-url: url(./assets/Design\ sem\ nome\ light.jpg);
+  --switch-sun: url(./assets/sun_stars.svg);
+  transition: all;
+}
+
+body {
+  /*background-image: url(./assets/Background\ gamer.jpg); joga imagem na tela
+background-repeat: no-repeat; não repetir imagem
+background-size: cover; preenche a imagem independente do tamanho da tela 
+background-position: top center; centraliza a imagem
+*/
+  /*backgroud: color image repeat position/size*/
+  background: var(--bg-url) no-repeat top center/cover;
+}
+body * {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  /*border: 1px solid white; define uma borda para a caixa*/
+  width: 360px; /*define uma largura para a caixa*/
+  height: 710px; /*define uma altura para a caixa*/
+  margin-left: auto; /*ajusta a esquerda da caixa*/
+  margin-right: auto; /*ajusta a direita da caixa*/
+  padding-top: 56px; /*ajusta a distancia das coisas ao topo da caixa, pode ser usado a função margin-top
+  (margin: 56px(altura)  auto(lateral direita 0px(em baixo) auto(lateral esquerda)) essa seria uma função igual e mais precisa*/
+  padding: 0 24px;
+}
+
+/*profile settings*/
+#profile img {
+  width: 112px; /*ajusta tamanho da imagem(perfil)*/
+}
+#profile {
+  text-align: center; /*alinha a imagem com o centro da caixa)*/
+  padding: 24px; /*acrescenta um espaço de 24px nas bordas da caixa*/
+}
+#profile p {
+  font-size: 16px; /*tamanho da font*/
+  font-weight: 600; /*espessura/peso da font*/
+  line-height: 24px; /*altura da linha escrita*/
+  margin-top: 8px; /*distancia do texto ao topo da caixa*/
+}
+
+/* switchs  */
+#switch{
+  position: relative;
+  width: 64px;
+} 
+
+
+#switch button{
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-sun) no-repeat center;
+  border-radius: 50%;
+  display: flex;
+  top: 50%;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+
+  transform: translateY(-50%);
+}
+.light #switch button{
+  right: 0;
+  left: initial;
+  transition: all;
+}
+#switch span{
+  width: 64px;
+  height: 24px;
+  background: rgba(109, 105, 105, 0.3);
+  border: 1px solid white;
+  border-radius: 20px;
+  display: block;
+
+}
+
+/* LINKS */
+
+ul {
+  list-style: none;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+ul li a {
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  background: rgba(109, 105, 105, 0.3);
+
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: background 1s;
+}
+ul li a:hover {
+  border: 3px solid var(--text-color);
+  background: rgba(212, 209, 209, 0.3);
+}
+
+/*social links */
+
+#social {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.5s;
+  border-radius: 50%;
+
+}
+
+
+#social a:hover {
+  background: rgba(133, 130, 130, 0.3);
+  border-radius: 50%;
+}
+
+footer{
+  padding: 24px;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+/*sobre mim*/
+
+#container2{
+  /* border: 1px solid white; */
+  width: 1000px; /*define uma largura para a caixa*/
+  margin-left: auto; /*ajusta a esquerda da caixa*/
+  margin-right: auto; /*ajusta a direita da caixa*/
+  padding-top: 24px;
+}
+
+#profile2{
+  border: 1px solid var(--text-color);
+  background: rgba(109, 105, 105, 0.3);
+  border-radius: 10px;
+  width: 300px;
+
+  justify-content: center;
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  
+}
+
+
+ul{
+   list-style: none;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    
+}
+
+ul li p{
+  border-radius: 20px;
+  background: rgba(109, 105, 105, 0.3);
+
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: background 1s;
+}
+
+ul li p:active{
+  border: 1.5px solid var(--text-color);
+  border-radius: 20px;
+  background: rgba(61, 59, 59, 0.3);
+}
+
