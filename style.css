@@ -5,16 +5,20 @@
 }
 
 :root{
-  --text-color: white;
+  --text-color: rgb(255, 255, 255);
   --bg-url: url(./assets/Design\ sem\ nome.png);
   --switch-sun: url(./assets/moon_stars.svg);
+  --op-o: 0;
 }
 .light{
-  --text-color: black; 
+  --text-color: rgb(0, 0, 0); 
   --bg-url: url(./assets/Design\ sem\ nome\ light.jpg);
   --switch-sun: url(./assets/sun_stars.svg);
   transition: all;
 }
+.info{
+}
+
 
 body {
   /*background-image: url(./assets/Background\ gamer.jpg); joga imagem na tela
@@ -73,13 +77,13 @@ body * {
   left: 0;
   position: absolute;
   z-index: 1;
-
+  transition: all 0.5s;
   transform: translateY(-50%);
 }
 .light #switch button{
   right: 0;
   left: initial;
-  transition: all;
+  transition: all 0.5s;
 }
 #switch span{
   width: 64px;
@@ -98,6 +102,8 @@ ul {
   gap: 16px;
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
+  transition: all 1s;
 }
 ul li a {
   border: 1px solid var(--text-color);
@@ -112,14 +118,17 @@ ul li a {
   text-decoration: none;
   font-weight: 600;
 
+  transition: all 1s;
   transition: background 1s;
 }
 ul li a:hover {
-  border: 3px solid var(--text-color);
+  border: 1.5px solid var(--text-color);
   background: rgba(212, 209, 209, 0.3);
+  height: 70px;
+  transition: all 0.5s; 
 }
 
-/*social links */
+
 
 #social {
   display: flex;
@@ -152,59 +161,77 @@ footer{
 }
 
 
-/*sobre mim*/
 
-#container2{
-  /* border: 1px solid white; */
-  width: 1000px; /*define uma largura para a caixa*/
-  margin-left: auto; /*ajusta a esquerda da caixa*/
-  margin-right: auto; /*ajusta a direita da caixa*/
-  padding-top: 24px;
+
+
+/* sobre mim */
+#sobre{
+  width: 1000px;
+  height: 100px;
+  position: relative;
+  margin-top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-#profile2{
-  border: 1px solid var(--text-color);
-  background: rgba(109, 105, 105, 0.3);
-  border-radius: 10px;
-  width: 300px;
-
-  justify-content: center;
-  text-align: center;
-
-  margin-left: auto;
-  margin-right: auto;
+#sobre button{
 
   
-}
+  /* width: 1000px;  */
 
-
-ul{
-   list-style: none;
-    gap: 16px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-    
-}
-
-ul li p{
+  background: rgba(109, 105, 105, 0.3) no-repeat center;
   border-radius: 20px;
-  background: rgba(109, 105, 105, 0.3);
+  width: 300px;
 
-  height: 30px;
+  transition-behavior: initial;
+  transition-duration: 1s;
+  z-index: 1;
+  position: absolute;
+  bottom: 200px;
+  font-weight: 600;
+  gap: 16px;
+  height: 60px;
   justify-content: center;
   align-items: center;
   display: flex;
+  font-size: 15px;
 
-  text-decoration: none;
-  font-weight: 600;
+  left: 50%;
+  transform: translateX(-50%);
 
-  transition: background 1s;
+}
+#sobre button:hover{
+  background: rgba(212, 209, 209, 0.3);
+  height: 70px;
+  width: 400px;
 }
 
-ul li p:active{
-  border: 1.5px solid var(--text-color);
+ #sobre button:focus{ 
+
+  background: url(./assets/2.jpg) no-repeat center;
   border-radius: 20px;
-  background: rgba(61, 59, 59, 0.3);
+  width: 1000px;
+  height: 400px;
+  position: relative;
+  z-index: 1;
+  transition-behavior: initial;
+  transition-duration: 1s;
+  bottom: 100%;
+  border-bottom-width: 0;
+
+  font-weight: 600;
+  gap: 16px;
+  display: flex;
+
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0px;
+
 }
+
+
+
+
+
+
+
 
