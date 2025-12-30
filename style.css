@@ -4,21 +4,20 @@
   box-sizing: border-box; /*define q as medidas seram auteradas com base na caixa determinada*/
 }
 
-:root{
+:root {
   --text-color: rgb(255, 255, 255);
   --bg-url: url(./assets/Design\ sem\ nome.png);
   --switch-sun: url(./assets/moon_stars.svg);
   --op-o: 0;
 }
-.light{
-  --text-color: rgb(0, 0, 0); 
+.light {
+  --text-color: rgb(0, 0, 0);
   --bg-url: url(./assets/Design\ sem\ nome\ light.jpg);
   --switch-sun: url(./assets/sun_stars.svg);
   transition: all;
 }
-.info{
+.info {
 }
-
 
 body {
   /*background-image: url(./assets/Background\ gamer.jpg); joga imagem na tela
@@ -61,13 +60,12 @@ body * {
 }
 
 /* switchs  */
-#switch{
+#switch {
   position: relative;
   width: 64px;
-} 
+}
 
-
-#switch button{
+#switch button {
   width: 32px;
   height: 32px;
   background: white var(--switch-sun) no-repeat center;
@@ -80,19 +78,18 @@ body * {
   transition: all 0.5s;
   transform: translateY(-50%);
 }
-.light #switch button{
+.light #switch button {
   right: 0;
   left: initial;
   transition: all 0.5s;
 }
-#switch span{
+#switch span {
   width: 64px;
   height: 24px;
   background: rgba(109, 105, 105, 0.3);
   border: 1px solid white;
   border-radius: 20px;
   display: block;
-
 }
 
 /* LINKS */
@@ -125,10 +122,8 @@ ul li a:hover {
   border: 1.5px solid var(--text-color);
   background: rgba(212, 209, 209, 0.3);
   height: 70px;
-  transition: all 0.5s; 
+  transition: all 0.5s;
 }
-
-
 
 #social {
   display: flex;
@@ -145,27 +140,21 @@ ul li a:hover {
   padding: 16px;
   transition: background 0.5s;
   border-radius: 50%;
-
 }
-
 
 #social a:hover {
   background: rgba(133, 130, 130, 0.3);
   border-radius: 50%;
 }
 
-footer{
+footer {
   padding: 24px;
   text-align: center;
   font-size: 16px;
 }
 
-
-
-
-
 /* sobre mim */
-#sobre{
+#sobre {
   width: 1000px;
   height: 100px;
   position: relative;
@@ -173,9 +162,7 @@ footer{
   left: 50%;
   transform: translateX(-50%);
 }
-#sobre button{
-
-  
+#sobre button {
   /* width: 1000px;  */
 
   background: rgba(109, 105, 105, 0.3) no-repeat center;
@@ -197,16 +184,14 @@ footer{
 
   left: 50%;
   transform: translateX(-50%);
-
 }
-#sobre button:hover{
+#sobre button:hover {
   background: rgba(212, 209, 209, 0.3);
   height: 70px;
   width: 400px;
 }
 
- #sobre button:focus{ 
-
+#sobre button:focus {
   background: url(./assets/2.jpg) no-repeat center;
   border-radius: 20px;
   width: 1000px;
@@ -225,13 +210,210 @@ footer{
   left: 50%;
   transform: translateX(-50%);
   font-size: 0px;
-
 }
 
+/* TABLETES E LAPTOPS */
+@media (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*define q as medidas seram auteradas com base na caixa determinada*/
+  }
 
+  :root {
+    --text-color: rgb(255, 255, 255);
+    --bg-url: rgb(27, 26, 26);
+    --switch-sun: url(./assets/moon_stars.svg);
+    --op-o: 0;
+  }
+  .light {
+    --text-color: rgb(0, 0, 0);
+    --bg-url: rgb(219, 209, 209);
+    --switch-sun: url(./assets/sun_stars.svg);
+    transition: all;
+  }
+  .info {
+  }
 
+  body {
+    /*background-image: url(./assets/Background\ gamer.jpg); joga imagem na tela
+background-repeat: no-repeat; não repetir imagem
+background-size: cover; preenche a imagem independente do tamanho da tela 
+background-position: top center; centraliza a imagem
+*/
+    /*backgroud: color image repeat position/size*/
+    background: var(--bg-url) no-repeat top center/cover;
+  }
+  body * {
+    font-family: "Open Sans", sans-serif;
+    color: var(--text-color);
+  }
 
+  #container {
+    /*border: 1px solid white; define uma borda para a caixa*/
+    width: 360px; /*define uma largura para a caixa*/
+    height: 710px; /*define uma altura para a caixa*/
+    margin-left: auto; /*ajusta a esquerda da caixa*/
+    margin-right: auto; /*ajusta a direita da caixa*/
+    padding-top: 56px; /*ajusta a distancia das coisas ao topo da caixa, pode ser usado a função margin-top
+  (margin: 56px(altura)  auto(lateral direita 0px(em baixo) auto(lateral esquerda)) essa seria uma função igual e mais precisa*/
+    padding: 0 24px;
+  }
 
+  /*profile settings*/
+  #profile img {
+    width: 112px; /*ajusta tamanho da imagem(perfil)*/
+  }
+  #profile {
+    text-align: center; /*alinha a imagem com o centro da caixa)*/
+    padding: 24px; /*acrescenta um espaço de 24px nas bordas da caixa*/
+  }
+  #profile p {
+    font-size: 16px; /*tamanho da font*/
+    font-weight: 600; /*espessura/peso da font*/
+    line-height: 24px; /*altura da linha escrita*/
+    margin-top: 8px; /*distancia do texto ao topo da caixa*/
+  }
 
+  /* switchs  */
+  #switch {
+    position: relative;
+    width: 64px;
+  }
 
+  #switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-sun) no-repeat center;
+    border-radius: 50%;
+    display: flex;
+    top: 50%;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s;
+    transform: translateY(-50%);
+  }
+  .light #switch button {
+    right: 0;
+    left: initial;
+    transition: all 0.5s;
+  }
+  #switch span {
+    width: 64px;
+    height: 24px;
+    background: rgba(109, 105, 105, 0.3);
+    border: 1px solid white;
+    border-radius: 20px;
+    display: block;
+  }
 
+  /* LINKS */
+
+  ul {
+    list-style: none;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    transition: all 1s;
+  }
+  ul li a {
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    background: rgba(109, 105, 105, 0.3);
+
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: all 1s;
+    transition: background 1s;
+  }
+  ul li a:hover {
+    border: 1.5px solid var(--text-color);
+    background: rgba(212, 209, 209, 0.3);
+    height: 70px;
+    transition: all 0.5s;
+  }
+
+  #social {
+    display: flex;
+    gap: 40px;
+    padding: 24px 0;
+    font-size: 24px;
+    justify-content: center;
+  }
+
+  #social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.5s;
+    border-radius: 50%;
+  }
+
+  #social a:hover {
+    background: rgba(133, 130, 130, 0.3);
+    border-radius: 50%;
+  }
+
+  footer {
+    padding: 24px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* sobre mim */
+  #sobre {
+    width: 0px;
+    height: 0px;
+    position: relative;
+    margin-top: 0px;
+  }
+  #sobre button {
+    /* width: 1000px;  */
+
+    background: rgba(109, 105, 105, 0.3) no-repeat center;
+    border-radius: 0px;
+    width: 0px;
+
+    transition-behavior: initial;
+    transition-duration: 0s;
+    z-index: 0;
+    position: absolute;
+    bottom: 0px;
+    font-weight: 0;
+    gap: 0px;
+    height: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 0px;
+  }
+  #sobre button:hover {
+    height: 0px;
+    width: 0px;
+  }
+
+  #sobre button:focus {
+    border-radius: 0px;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    z-index: 0;
+    transition-behavior: initial;
+    transition-duration: 0s;
+    bottom: 0;
+    border-bottom-width: 0;
+
+    font-weight: 0;
+    gap: 0px;
+    display: flex;
+  }
+}
